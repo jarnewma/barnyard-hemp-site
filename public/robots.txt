@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jsonplaceholder.typicode.com/
+
+# Sitemaps
+Sitemap: https://jsonplaceholder.typicode.com/sitemap.xml
+Sitemap: http://localhost:3000/serversite.xml
