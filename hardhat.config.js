@@ -1,10 +1,18 @@
 require("@nomiclabs/hardhat-waffle");
 require('dotenv').config();
-require("@nomiclabs/hardhat-ethers");
 
 const { API_URL, PRIVATE_KEY } = process.env;
 
 module.exports = {
+  solidity: {
+    version: "0.8.4",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
@@ -18,14 +26,5 @@ module.exports = {
     //   url: "https://polygon-rpc.com/",
     //   accounts: [process.env.pk]
     // }
-  },
-  solidity: {
-    version: "0.8.4",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200
-      }
-    }
   }
 };
